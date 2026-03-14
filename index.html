@@ -23,18 +23,17 @@
             background: var(--bg); 
         }
         
-        /* Header & Profile Photo */
         header { 
             display: flex; 
             align-items: center; 
-            gap: 30px; 
+            gap: 40px; 
             border-bottom: 2px solid var(--primary); 
-            padding-bottom: 30px; 
+            padding-bottom: 40px; 
             margin-bottom: 40px; 
         }
         .profile-photo { 
-            width: 180px; 
-            height: 180px; 
+            width: 200px; 
+            height: 200px; 
             border-radius: 50%; 
             object-fit: cover; 
             border: 3px solid var(--primary);
@@ -47,29 +46,27 @@
             letter-spacing: -1px; 
         }
         .header-text .subtitle { 
-            /* Improved Readability for Subtitle */
             font-family: 'Georgia', serif; 
             font-style: italic;
-            font-size: 1.25rem; 
-            color: #555; 
-            margin-top: 15px; /* Spaced out from title */
+            font-size: 1.3rem; 
+            color: #444; 
+            margin-top: 20px; 
             letter-spacing: 0.5px;
+            line-height: 1.4;
         }
 
-        /* Navigation */
         nav { 
             display: flex; 
-            justify-content: space-around; /* Better spacing for tabs */
+            justify-content: space-between; 
             margin-bottom: 50px; 
             border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
         nav a { 
             text-decoration: none; 
             color: var(--primary); 
             font-weight: 600; 
-            font-size: 1rem;
-            padding: 5px 10px;
+            font-size: 1.1rem;
             transition: color 0.3s;
         }
         nav a:hover { color: var(--accent); }
@@ -81,32 +78,30 @@
             letter-spacing: 2px; 
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
-        h3 { color: var(--accent); font-size: 1.1rem; margin-top: 30px; }
+        h3 { color: var(--accent); font-size: 1.15rem; margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 10px; }
 
-        /* Publications & Accordion */
         details { background: #fff; padding: 15px; border: 1px solid #eee; border-radius: 8px; margin-bottom: 12px; transition: all 0.3s; }
         summary { cursor: pointer; list-style: none; font-weight: bold; display: flex; justify-content: space-between; align-items: flex-start; }
         summary::-webkit-details-marker { display: none; }
         summary::after { content: '+'; color: var(--accent); font-size: 1.4rem; }
         details[open] summary::after { content: '−'; }
         
-        .pub-info { font-size: 0.95rem; line-height: 1.4; color: #111; padding-right: 20px; }
-        .pub-meta { display: block; font-weight: normal; color: #666; font-size: 0.9rem; margin-top: 4px; }
-        .gist { background: #f9f9f9; padding: 15px; margin-top: 15px; border-left: 4px solid var(--accent); font-size: 0.95rem; }
+        .pub-info { font-size: 0.95rem; line-height: 1.5; color: #111; padding-right: 25px; }
+        .pub-meta { display: block; font-weight: normal; color: #555; font-size: 0.9rem; margin-top: 6px; }
+        .gist { background: #f9f9f9; padding: 15px; margin-top: 15px; border-left: 4px solid var(--accent); font-size: 0.95rem; font-style: italic; }
         
-        .btn { display: inline-block; margin-top: 10px; padding: 6px 15px; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; }
+        .btn { display: inline-block; margin-top: 12px; padding: 6px 16px; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; }
         .btn-active { background: var(--accent); color: #fff; }
-        .btn-disabled { background: var(--grayed); color: #888; cursor: not-allowed; }
+        .btn-disabled { background: var(--grayed); color: #777; cursor: not-allowed; }
 
-        /* Media List */
         .media-list { list-style: none; padding: 0; }
-        .media-item { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0; }
+        .media-item { margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #f0f0f0; line-height: 1.5; }
         .media-link { color: var(--accent); font-weight: bold; text-decoration: none; }
         .media-link:hover { text-decoration: underline; }
 
-        footer { text-align: center; margin-top: 80px; font-size: 0.8rem; color: #999; }
+        footer { text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid #eee; font-size: 0.85rem; color: #888; }
     </style>
 </head>
 <body>
@@ -115,7 +110,7 @@
     <img src="your-photo.jpg" alt="Dr. Chirag Dhara" class="profile-photo">
     <div class="header-text">
         <h1>Chirag Dhara, Ph.D.</h1>
-        <p class="subtitle">Climate & Sustainability Scientist | Assistant Professor, Krea University</p>
+        <p class="subtitle">Climate & Sustainability Scientist<br>Assistant Professor, Krea University</p>
     </div>
 </header>
 
@@ -128,17 +123,17 @@
 
 <section id="about">
     <h2>About</h2>
-    <p>I am an interdisciplinary scientist currently serving as an <strong>Assistant Professor</strong> at <strong>Krea University</strong>[cite: 9, 10]. My career trajectory spans fundamental physics and earth system science, holding dual doctorates: a Ph.D. in <strong>Climate Science</strong> from the Max Planck Institute for Biogeochemistry (2017) and a Ph.D. in <strong>Quantum Information</strong> from the Universitat Politècnica de Catalunya (2013)[cite: 17, 18].</p>
-    <p>Prior to my current appointment, I served as a <strong>Research Associate</strong> at the Indian Institute of Tropical Meteorology (IITM) in Pune[cite: 11, 15]. My work is characterized by the application of rigorous physical principles to pressing global challenges in climate dynamics and sustainability[cite: 3, 4, 7].</p>
+    <p>I am an interdisciplinary scientist currently serving as an <strong>Assistant Professor</strong> at <strong>Krea University</strong> (2021–present). My research focuses on reconciling human development with planetary boundaries, drawing from a unique academic foundation in both theoretical physics and earth system science.</p>
+    <p>I hold dual doctorates: a Ph.D. in <strong>Climate Science</strong> from the <strong>Max Planck Institute for Biogeochemistry</strong> (2017) and a Ph.D. in <strong>Quantum Information</strong> from the <strong>Universitat Politècnica de Catalunya</strong> (2013). Before joining Krea, I was a <strong>Research Associate</strong> at the <strong>Indian Institute of Tropical Meteorology (IITM)</strong> in Pune (2019–2021).</p>
 </section>
 
 <section id="interests">
     <h2>Research Interests</h2>
     <ul>
-        <li>Global and regional monsoon projections [cite: 4]</li>
-        <li>Environmental performance of countries [cite: 5]</li>
-        <li>Climate responsibility and finance [cite: 6]</li>
-        <li>Sustainable development [cite: 7]</li>
+        <li>Global and regional monsoon projections</li>
+        <li>Environmental performance of countries</li>
+        <li>Climate responsibility and finance</li>
+        <li>Sustainable development</li>
     </ul>
 </section>
 
@@ -151,12 +146,10 @@
         <summary>
             <span class="pub-info">
                 A post-AR6 update on observed and projected climate change in India
-                <span class="pub-meta"><strong>Chirag Dhara</strong>, Aditi Deshpande, Roxy Mathew Koll, Padmini Delpadado, and Mandira Shreshta. <em>PLOS Climate</em> (2025)</span>
+                <span class="pub-meta"><strong>Chirag Dhara</strong>, Aditi Deshpande, Roxy Mathew Koll, Padmini Delpadado, and Mandira Shreshta. <em>PLOS Climate</em> (2025).</span>
             </span>
         </summary>
-        <div class="gist">
-            An updated synthesis of the most current climate data for the Indian subcontinent, providing projections on temperature, rainfall, and extreme weather following the latest IPCC frameworks.
-        </div>
+        <div class="gist">Provides a critical synthesis of the most current climate data for the Indian subcontinent, aligning regional projections with the latest IPCC Assessment Report (AR6).</div>
         <a href="pdfs/india-update-2025.pdf" class="btn btn-active">Download PDF</a>
     </details>
 
@@ -164,12 +157,10 @@
         <summary>
             <span class="pub-info">
                 Interpreting climate performance indices: implications for equitable and effective policy
-                <span class="pub-meta"><strong>Chirag Dhara</strong>, Anshuman Gupta, Ishita Bagri, Sebastian Block, and Kamal Murari. <em>Climate Policy</em> (2025)</span>
+                <span class="pub-meta"><strong>Chirag Dhara</strong>, Anshuman Gupta, Ishita Bagri, Sebastian Block, and Kamal Murari. <em>Climate Policy</em> (2025).</span>
             </span>
         </summary>
-        <div class="gist">
-            A critical evaluation of how "green" rankings can be mathematically and ethically skewed against developing nations, proposing fairer metrics for global climate action.
-        </div>
+        <div class="gist">Critiques the mathematical and ethical foundations of popular climate performance indices, highlighting biases against the Global South and suggesting pathways for fairer policy metrics.</div>
         <a href="pdfs/indices-2025.pdf" class="btn btn-active">Download PDF</a>
     </details>
 
@@ -177,42 +168,154 @@
         <summary>
             <span class="pub-info">
                 Future Intensification of Northern Hemisphere Monsoons Due to Declining Remote Aerosol Pollution
-                <span class="pub-meta">K P Sooraj, <strong>Chirag Dhara</strong>, D. C. Ayantika, et al. <em>Environmental Research Letters</em> (2025)</span>
+                <span class="pub-meta">K P Sooraj, <strong>Chirag Dhara</strong>, D. C. Ayantika, Kalik Vishisth, K. M. Sumit, Andy Turner, and R. Krishnan. <em>Environmental Research Letters</em> (2025).</span>
             </span>
         </summary>
-        <div class="gist">
-            Investigating how the reduction of aerosol pollution in Europe and North America influences Northern Hemisphere heat patterns and intensifies monsoon rainfall in regions like India.
-        </div>
+        <div class="gist">Demonstrates how the reduction of aerosol pollution in North America and Europe contributes to a hemispheric heat imbalance that intensifies Northern Hemisphere monsoons.</div>
         <a href="pdfs/monsoon-aerosol-2025.pdf" class="btn btn-active">Download PDF</a>
     </details>
 
     <details>
         <summary>
             <span class="pub-info">
-                Optimal measurements and fixed-point maps
-                <span class="pub-meta"><strong>Chirag Dhara</strong> and N.D. Hari Dass. <em>Physical Review A</em> (2005)</span>
+                Bridging Climate Science, Policy, and Communities: Collaborative Pathways for Climate Resilience in the Indo-Pacific
+                <span class="pub-meta">Modi, Aditi, Roxy Mathew Koll, Shipra Jain, ..., <strong>Chirag Dhara</strong>, Sahana Ghosh. <em>Frontiers in Climate</em> (2025).</span>
             </span>
         </summary>
-        <div class="gist"></div> <span class="btn btn-disabled">Download PDF (Unavailable)</span>
+        <div class="gist">Examines the necessity of multi-stakeholder collaboration to translate high-level climate science into actionable resilience strategies for vulnerable Indo-Pacific communities.</div>
+        <a href="pdfs/indo-pacific-resilience-2025.pdf" class="btn btn-active">Download PDF</a>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">
+                A Scalability-Centric Perspective on Global Human Development within Environmental Limits
+                <span class="pub-meta">Soumyajit Bhar and <strong>Chirag Dhara</strong>. <em>Sustainability: Science, Practice and Policy</em> (2025).</span>
+            </span>
+        </summary>
+        <div class="gist">Argues that development models must be globally scalable to be considered sustainable, identifying "Costa Rica-style" development as a more viable path than high-consumption Northern models.</div>
+        <a href="pdfs/scalability-2025.pdf" class="btn btn-active">Download PDF</a>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">
+                Compound weather and climate extremes in the Asian region: science-informed recommendations for policy
+                <span class="pub-meta">Krishnan, R., <strong>Chirag Dhara</strong>, T. Horinouchi, et al. <em>Frontiers in Climate</em> (2025).</span>
+            </span>
+        </summary>
+        <div class="gist">Evaluates the rising threat of simultaneous and cascading climate extremes in Asia and provides evidence-based policy frameworks for risk management.</div>
+        <a href="pdfs/compound-extremes-2025.pdf" class="btn btn-active">Download PDF</a>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">
+                Advancing South Asian monsoon climate change projections: Challenges and opportunities
+                <span class="pub-meta"><strong>Chirag Dhara</strong> and R. Krishnan. <em>J. Ind. Geophys. Union</em> (2022).</span>
+            </span>
+        </summary>
+        <div class="gist">Reviews the physical drivers and modeling limitations of South Asian monsoon projections, outlining a roadmap for improving forecast reliability.</div>
+        <a href="pdfs/monsoon-projections-2022.pdf" class="btn btn-active">Download PDF</a>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">
+                Constraining Global Changes in Temperature and Precipitation From Observable Changes in Surface Radiative Heating
+                <span class="pub-meta"><strong>Chirag Dhara</strong>. <em>Geophysical Research Letters</em> (2020).</span>
+            </span>
+        </summary>
+        <div class="gist">Utilizes an energy balance framework to constrain climate sensitivity and hydrologic changes based on observed shifts in surface radiative heating.</div>
+        <a href="pdfs/constraining-global-changes-2020.pdf" class="btn btn-active">Download PDF</a>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">Broad climatological variation of surface energy balance partitioning across land and ocean predicted from the maximum power limit <span class="pub-meta"><strong>Chirag Dhara</strong>, Renner, M. and Kleidon, A. <em>Geophysical Research Letters</em> (2016).</span></span>
+        </summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">Maximally nonlocal theories cannot be maximally random <span class="pub-meta">G. de la Torre, M. Hoban, <strong>Chirag Dhara</strong>, G. Prettico and A. Acin. <em>Phys. Rev. Lett.</em> (2015).</span></span>
+        </summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">Can observed randomness be certified to be fully intrinsic? <span class="pub-meta"><strong>Chirag Dhara</strong>, G. de la Torre and A. Acin. <em>Phys. Rev. Lett.</em> (2014).</span></span>
+        </summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">Maximal quantum randomness in Bell tests <span class="pub-meta"><strong>Chirag Dhara</strong>, G. Prettico and A. Acin. <em>Phys. Rev. A</em> (2013).</span></span>
+        </summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">Full randomness from arbitrarily deterministic events <span class="pub-meta">R. Gallego, L. Masanes, G. de la Torre, <strong>Chirag Dhara</strong>, et al. <em>Nature Communications</em> (2013).</span></span>
+        </summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">Security of device-independent quantum key distribution protocols <span class="pub-meta"><strong>Chirag Dhara</strong>, L. Masanes, S. Pironio, A. Acin. <em>Proc. of Theory of Quantum Computation</em> (2011).</span></span>
+        </summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">Noisy evolution of graph-state entanglement <span class="pub-meta">L. Aolita, D. Cavalcanti, R. Chavez, <strong>Chirag Dhara</strong>, et al. <em>Phys. Rev. A</em> (2010).</span></span>
+        </summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+
+    <details>
+        <summary>
+            <span class="pub-info">Optimal measurements and fixed-point maps <span class="pub-meta"><strong>Chirag Dhara</strong> and N.D. Hari Dass. <em>Physical Review A</em> (2005).</span></span>
+        </summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
     </details>
 
     <h3>Under Review</h3>
     <details>
         <summary>
-            <span class="pub-info">
-                Historic Global Inequality and Avoided Climate Destabilisation
-                <span class="pub-meta">Shrutee Jalan, <strong>Chirag Dhara</strong>, Shoibal Chakraborty, Soumyajit Bhar, Ashwin Seshadri. (2025)</span>
-            </span>
+            <span class="pub-info">Historic Global Inequality and Avoided Climate Destabilisation <span class="pub-meta">Shrutee Jalan, <strong>Chirag Dhara</strong>, Shoibal Chakraborty, Soumyajit Bhar, Ashwin Seshadri (2025).</span></span>
         </summary>
-        <div class="gist">Currently being revised after the first round of review in <em>Climate Policy</em>.</div>
-        <a href="https://osf.io/a3zng" class="btn btn-active">View Preprint</a>
+        <div class="gist">Paper being revised after 1st round review in <em>Climate Policy</em>.</div>
+        <a href="https://osf.io/a3zng" class="btn btn-active" target="_blank">View Preprint</a>
     </details>
 
     <h3>Under Preparation</h3>
     <details>
-        <summary>
-            <span class="pub-info">A New Development Classification for the 21st Century <span class="pub-meta"><strong>Chirag Dhara</strong> and Thomas Bejoy.</span></span>
-        </summary>
+        <summary><span class="pub-info">A New Development Classification for the 21st Century <span class="pub-meta"><strong>Chirag Dhara</strong> and Thomas Bejoy.</span></span></summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+    <details>
+        <summary><span class="pub-info">Near-future strengthening of the South Asian monsoon circulation and organized convection with rapid aerosol reductions <span class="pub-meta"><strong>Chirag Dhara</strong>, D.C. Ayantika, R. Krishnan, and Chaitri Roy.</span></span></summary>
+        <div class="gist"></div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+    <details>
+        <summary><span class="pub-info">Abstracting lessons from positive social-ecological transformations in the Global South <span class="pub-meta"><strong>Chirag Dhara</strong>, Gustav Cederlöf, Viviana Cordero, Carolina Mauri, Tannya Pico, and Soumyajit Bhar.</span></span></summary>
         <div class="gist"></div>
         <span class="btn btn-disabled">Download PDF</span>
     </details>
@@ -220,12 +323,44 @@
     <h3>Book Chapters</h3>
     <details>
         <summary>
-            <span class="pub-info">
-                Indian Ocean Warming
-                <span class="pub-meta">Roxy M.K., C. Gnanaseelan, ... <strong>Chirag Dhara</strong> (Lead author). <em>Assessment of Climate Change over the Indian Region</em> (2020)</span>
-            </span>
+            <span class="pub-info">6. Quantum Artificial Intelligence for the Science of Climate Change <span class="pub-meta">Singh, Manmeet; <strong>Chirag Dhara</strong>, et al. <em>Artificial Intelligence... in Quantum Satellite</em> (2022).</span></span>
         </summary>
-        <div class="gist">Featured in the official national assessment report by the Ministry of Earth Sciences.</div>
+        <div class="gist">Explores the intersection of quantum computing and climate modeling.</div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+    <details>
+        <summary>
+            <span class="pub-info">5. The Elephant in the Room: Why Transformative Education Must Address the Problem of Endless Exponential Economic Growth <span class="pub-meta"><strong>Dhara, C.</strong>, and Singh, V. <em>Curriculum and Learning for Climate Action</em> (2021).</span></span>
+        </summary>
+        <div class="gist">Discusses the systemic need for education to address growth-centric economic paradigms.</div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+    <details>
+        <summary>
+            <span class="pub-info">4. Executive Summary <span class="pub-meta">Krishnan, R., <strong>Dhara C.</strong> (Drafting author). <em>Assessment of Climate Change over the Indian Region</em> (2020).</span></span>
+        </summary>
+        <div class="gist">High-level summary for India's national climate assessment.</div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+    <details>
+        <summary>
+            <span class="pub-info">3. Indian Ocean Warming <span class="pub-meta">Roxy M.K., C. Gnanaseelan, ..., <strong>Dhara C.</strong> (Lead author). <em>Assessment of Climate Change over the Indian Region</em> (2020).</span></span>
+        </summary>
+        <div class="gist">Analyzes regional warming trends in the Indian Ocean.</div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+    <details>
+        <summary>
+            <span class="pub-info">2. Possible Climate Change Impacts and Policy-Relevant Messages <span class="pub-meta"><strong>Dhara C.</strong> (CLA), Krishnan R., Niyogi D. <em>Assessment of Climate Change over the Indian Region</em> (2020).</span></span>
+        </summary>
+        <div class="gist">Focuses on bridging science and policy.</div>
+        <span class="btn btn-disabled">Download PDF</span>
+    </details>
+    <details>
+        <summary>
+            <span class="pub-info">1. Introduction to Climate Change Over the Indian Region <span class="pub-meta">Krishnan R., C. Gnanaseelan, ... <strong>Dhara C.</strong> (CLA). <em>Assessment of Climate Change over the Indian Region</em> (2020).</span></span>
+        </summary>
+        <div class="gist">Introductory chapter for the MoES assessment report.</div>
         <span class="btn btn-disabled">Download PDF</span>
     </details>
 </section>
@@ -233,39 +368,18 @@
 <section id="media">
     <h2>Media and Outreach</h2>
     <div class="media-list">
-        <div class="media-item">
-            12. <a href="#" class="media-link">"'Easy' climate fixes are a trap, featuring Dr Chirag Dhara"</a> (2025). <em>The Boring Climate Podcast</em>. [cite: 102]
-        </div>
-        <div class="media-item">
-            11. <a href="#" class="media-link">Behind the shimmer, the toxic story of mica and forever chemicals</a> (2025). <em>Mongabay India</em>. [cite: 103]
-        </div>
-        <div class="media-item">
-            10. <a href="#" class="media-link">Who is Really Developed?</a> (2025). <em>Down To Earth</em>. [cite: 104]
-        </div>
-        <div class="media-item">
-            9. <a href="#" class="media-link">The dangerous illusion cast by development rankings</a> (2025). <em>The Hindu</em>. [cite: 105]
-        </div>
-        <div class="media-item">
-            8. <a href="#" class="media-link">Why sustainable development ought to look more like Costa Rica, less like Norway</a> (2024). <em>360info</em>. [cite: 106]
-        </div>
-        <div class="media-item">
-            7. <a href="#" class="media-link">Extreme heat threatens health, jobs and democracy in India</a> (2024). <em>360info</em>. [cite: 108]
-        </div>
-        <div class="media-item">
-            6. <a href="#" class="media-link">Restoring the Planet Will Need More than a Climate Price Tag</a> (2023). <em>Scientific American</em>. [cite: 109]
-        </div>
-        <div class="media-item">
-            5. <a href="#" class="media-link">Indian aviation's turbulent path to sustainability</a> (2023). <em>Mongabay India</em>. [cite: 110]
-        </div>
-        <div class="media-item">
-            4. <a href="#" class="media-link">How a warming Pacific Ocean and climate change will impact agriculture</a> (2023). <em>Nature India</em>. [cite: 111]
-        </div>
-        <div class="media-item">
-            3. <a href="#" class="media-link">What will an El Nino bring next to India?</a> (2023). <em>360info</em>. [cite: 112]
-        </div>
-        <div class="media-item">
-            2. <a href="#" class="media-link">How and Why India's Climate will Change in the Coming Decades</a> (2021). <em>The India Forum</em>. [cite: 113]
-        </div>
+        <div class="media-item">12. <a href="#" class="media-link">"'Easy' climate fixes are a trap, featuring Dr Chirag Dhara"</a> (2025). <em>The Boring Climate Podcast</em>.</div>
+        <div class="media-item">11. <a href="#" class="media-link">Behind the shimmer, the toxic story of mica and forever chemicals</a> (2025). <em>Mongabay India</em>.</div>
+        <div class="media-item">10. <a href="#" class="media-link">Who is Really Developed?</a> (2025). <em>Down To Earth</em>.</div>
+        <div class="media-item">9. <a href="#" class="media-link">The dangerous illusion cast by development rankings</a> (2025). <em>The Hindu</em>.</div>
+        <div class="media-item">8. <a href="#" class="media-link">Why sustainable development ought to look more like Costa Rica, less like Norway</a> (2025). <em>360info</em>.</div>
+        <div class="media-item">7. <a href="#" class="media-link">The dangerous illusion cast by development rankings</a> (2025). <em>The Hindu</em>.</div>
+        <div class="media-item">6. <a href="#" class="media-link">Extreme heat threatens health, jobs and democracy in India</a> (2024). <em>360info</em>.</div>
+        <div class="media-item">5. <a href="#" class="media-link">Restoring the Planet Will Need More than a Climate Price Tag</a> (2023). <em>Scientific American</em>.</div>
+        <div class="media-item">4. <a href="#" class="media-link">Indian aviation's turbulent path to sustainability</a> (2023). <em>Mongabay India</em>.</div>
+        <div class="media-item">3. <a href="#" class="media-link">How a warming Pacific Ocean and climate change will impact agriculture</a> (2023). <em>Nature India</em>.</div>
+        <div class="media-item">2. <a href="#" class="media-link">What will an El Nino bring next to India?</a> (2023). <em>360info</em>.</div>
+        <div class="media-item">1. <a href="#" class="media-link">How and Why India's Climate will Change in the Coming Decades</a> (2021). <em>The India Forum</em>.</div>
     </div>
 </section>
 
