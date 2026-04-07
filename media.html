@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Outreach | Dr. Chirag Dhara</title>
+    <style>
+        :root { 
+            --primary: #004d40; 
+            --accent: #00796b; 
+            --text: #333; 
+            --bg: #ffffff;
+            --muted: #f4f4f4;
+            --grayed: #cccccc;
+        }
+        body { 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text); 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            background: var(--bg); 
+        }
+        header { display: flex; align-items: center; gap: 40px; border-bottom: 2px solid var(--primary); padding-bottom: 40px; margin-bottom: 40px; }
+        .profile-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); background: #eee; }
+        .header-text h1 { font-size: 2.8rem; color: var(--primary); margin: 0; letter-spacing: -1px; }
+        .header-text .subtitle { font-family: 'Georgia', serif; font-style: italic; font-size: 1.3rem; color: #444; margin-top: 20px; letter-spacing: 0.5px; line-height: 1.4; }
+        
+        nav { display: flex; justify-content: space-between; margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 1.1rem; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        .active-tab { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 14px; }
+
+        h2 { color: var(--primary); text-transform: uppercase; font-size: 1.3rem; letter-spacing: 2px; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 60px; }
+        
+        .media-list { list-style: none; padding: 0; }
+        .media-item { margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #f0f0f0; line-height: 1.5; }
+        .media-link { color: var(--accent); font-weight: bold; text-decoration: none; }
+        .media-link:hover { text-decoration: underline; }
+
+        footer { text-align: center; margin-top: 100px; padding: 40px 0; border-top: 1px solid #eee; font-size: 0.85rem; color: #888; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; gap: 20px; padding-bottom: 25px; }
+            .header-text h1 { font-size: 2.2rem; }
+            nav { flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="your-photo.jpg" alt="Dr. Chirag Dhara" class="profile-photo">
+    <div class="header-text">
+        <h1>Dr. Chirag Dhara</h1>
+        <p class="subtitle">Climate & Sustainability Scientist<br>Assistant Professor, Krea University</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">About & Interests</a>
+    <a href="publications.html">Publications</a>
+    <a href="media.html" class="active-tab">Media & Outreach</a>
+</nav>
+
+<section id="media">
+    <h2>Media and Outreach</h2>
+    <div class="media-list">
+        <div class="media-item"> <a href="https://amp.scroll.in/article/1091132/indias-summer-forecast-is-a-warning-that-extreme-heat-can-affect-democracy" class="media-link" target="_blank">India’s summer forecast is a warning that extreme heat can affect democracy</a> (2025). <em>Scroll.in</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">For India, war in West Asia and extreme summer temperatures could trigger a double inflation shock</a> (2025). <em>The Indian Express</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">Lost in war: An alternative template of governance</a> (2025). <em>Hindustan Times</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">SOE 2026: India is warming fast. Will it lead to a climate apocalypse?</a> (2025). <em>Down To Earth</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">Here’s how extreme heat is undermining food security and public health across the world</a> (2025). <em>The Indian Express</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">India’s climate hotspots demand a national adaptation goal at COP 30</a> (2025). <em>Times of India</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">'Easy' climate fixes are a trap, featuring Dr Chirag Dhara</a> (2025). <em>The Boring Climate Podcast</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">Behind the shimmer, the toxic story of mica and forever chemicals</a> (2025). <em>Mongabay India</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">Who is Really Developed?</a> (2025). <em>Down To Earth</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">The dangerous illusion cast by development rankings</a> (2025). <em>The Hindu</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">Why sustainable development ought to look more like Costa Rica, less like Norway</a> (2025). <em>360info</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">Extreme heat threatens health, jobs and democracy in India</a> (2024). <em>360info</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">Restoring the Planet Will Need More than a Climate Price Tag</a> (2023). <em>Scientific American</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">Indian aviation's turbulent path to sustainability</a> (2023). <em>Mongabay India</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">How a warming Pacific Ocean and climate change will impact agriculture</a> (2023). <em>Nature India</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">What will an El Nino bring next to India?</a> (2023). <em>360info</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">How and Why India's Climate will Change in the Coming Decades</a> (2021). <em>The India Forum</em>.</div>
+        <div class="media-item"> <a href="#" class="media-link">The Delusion of Infinite Economic Growth</a> (2021). <em>Scientific American</em>.</div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Dr. Chirag Dhara | Assistant Professor, Krea University | <a href="mailto:chirag.dhara@krea.edu.in">Email</a></p>
+</footer>
+
+</body>
+</html>
